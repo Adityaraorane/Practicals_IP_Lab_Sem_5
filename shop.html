@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floweristly - Shop</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for flowers or bouquets...">
+            <button>Search</button>
+        </div>
+
+        <section class="product-pages">
+            <h1>Shop Our Collection</h1>
+            
+            <!-- Selected Products -->
+            <section class="product-section">
+                <div class="product" id="product-marigold">
+                    <img src="./assets/marigold.jpg" alt="Marigold">
+                    <h3>Marigold</h3>
+                    <p>Bright and vibrant marigolds, perfect for adding a splash of color to your space. $10.00 per dozen.</p>
+                    <button class="add-to-cart" data-product="Marigold" data-price="10.00">Add to Cart</button>
+                </div>
+                <!-- Repeat for other products with unique `data-product` and `data-price` attributes -->
+                              
+                <div class="product">
+                    <img src="./assets/imgs8.webp" alt="Romantic Bouquet">
+                    <h3>Romantic Bouquet</h3>
+                    <p>A romantic bouquet featuring roses and lilies, ideal for expressing your deepest feelings. $39.99.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./assets/tulip.webp" alt="Tulip">
+                    <h3>Tulip</h3>
+                    <p>Bright and colorful tulips, a delightful choice for any occasion. $12.00 per dozen.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./assets/imgs6.webp" alt="Elegant Mix">
+                    <h3>Elegant Mix</h3>
+                    <p>A sophisticated mix of elegant flowers to enhance any setting with its charm. $45.00.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./assets/lily.webp" alt="Lily">
+                    <h3>Lily</h3>
+                    <p>Elegant lilies with a lovely fragrance, perfect for special occasions. $22.00 per dozen.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./assets/imgs1.jpeg" alt="Garden Bliss">
+                    <h3>Garden Bliss</h3>
+                    <p>A beautiful assortment of garden flowers to bring a touch of nature into your home. $40.00.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./assets/orchid.jpg" alt="Orchid">
+                    <h3>Orchid</h3>
+                    <p>Exotic orchids with a delicate touch, adding elegance and beauty to any room. $25.00 each.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./assets/imgs7.webp" alt="Carnation">
+                    <h3>Carnation</h3>
+                    <p>Colorful carnations that last, a vibrant and enduring addition to your flower collection. $14.00 per dozen.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Floweristly | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+    <script src="shop.js">
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', () => {
+                    const product = button.getAttribute('data-product');
+                    const price = button.getAttribute('data-price');
+                    
+                    // Store the cart items in localStorage (or handle it differently as needed)
+                    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    cart.push({ product, price });
+                    localStorage.setItem('cart', JSON.stringify(cart));
+        
+                    // Redirect to cart.html
+                    window.location.href = 'cart.html';
+                });
+            });
+        });
+        </script>
+        
+</body>
+</html>

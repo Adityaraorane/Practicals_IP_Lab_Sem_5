@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floweristly - Customize Your Bouquet</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* General Styling */
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Header Navigation */
+      header {
+        background-color: #4caf50;
+        padding: 15px 0;
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 15px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        background-color: #45a049;
+        border-radius: 5px;
+      }
+
+      main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        padding: 2rem;
+      }
+
+      .customize-container {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 800px;
+      }
+
+      .customize-container h1,
+      .customize-container h2 {
+        color: #333;
+      }
+
+      .customize-container p {
+        margin-bottom: 1rem;
+        color: #555;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      label {
+        font-weight: bold;
+        color: #333;
+      }
+
+      select,
+      input[type="text"],
+      input[type="color"],
+      textarea {
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        width: 100%;
+      }
+
+      button {
+        padding: 0.75rem;
+        border: none;
+        border-radius: 4px;
+        background-color: #28a745;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #218838;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .suggestions {
+        margin-top: 2rem;
+      }
+
+      .suggestions ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .suggestions li {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: #fff;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .suggestions li:hover {
+        background-color: #f1f1f1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 14px;
+      }
+
+      footer a {
+        color: #4caf50;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover {
+        color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="customize.html">Customize</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="customize-container">
+        <h1>Customize Your Bouquet</h1>
+        <p>
+          Personalize your bouquet with your favorite flowers, colors, and add a
+          special touch for any occasion. Fill out the form below to create a
+          unique bouquet tailored just for you.
+        </p>
+
+        <form id="customizerForm" action="#" method="post">
+          <label for="flowerType">Select Flower Type:</label>
+          <select id="flowerType" name="flowerType" required>
+            <option value="" disabled selected>Select a flower</option>
+            <option value="rose">Rose</option>
+            <option value="marigold">Marigold</option>
+            <option value="lotus">Lotus</option>
+            <option value="lily">Lily</option>
+            <option value="tulip">Tulip</option>
+            <option value="orchid">Orchid</option>
+            <option value="sunflower">Sunflower</option>
+            <option value="daisy">Daisy</option>
+            <option value="peony">Peony</option>
+            <option value="chrysanthemum">Chrysanthemum</option>
+            <option value="carnation">Carnation</option>
+            <option value="hydrangea">Hydrangea</option>
+            <option value="daffodil">Daffodil</option>
+
+            <!-- Additional options can be added here -->
+          </select>
+
+          <label for="color">Choose Color Theme:</label>
+          <input
+            type="color"
+            id="color"
+            name="color"
+            value="#ff0000"
+            required
+          />
+
+          <label for="occasion">Occasion:</label>
+          <input
+            type="text"
+            id="occasion"
+            name="occasion"
+            placeholder="e.g., Birthday, Anniversary"
+            required
+          />
+
+          <label for="additionalFeatures">Additional Features:</label>
+          <textarea
+            id="additionalFeatures"
+            name="additionalFeatures"
+            placeholder="Add any special requests or features here. e.g., Include a personalized note, specific flower arrangements, etc."
+          ></textarea>
+
+          <button type="submit">Create Bouquet</button>
+        </form>
+
+        <section class="suggestions">
+          <h2>Other Customizable Products</h2>
+          <p>
+            At Floweristly, we offer a range of customizable products to make
+            your special moments even more memorable. Here are some other items
+            you can personalize:
+          </p>
+          <ul>
+            <li>
+              <strong>Custom Flower Arrangements:</strong> Choose from various
+              flower types and colors to create a personalized arrangement for
+              any occasion.
+            </li>
+            <li>
+              <strong>Personalized Vases:</strong> Select a vase design and add
+              a custom message or decoration to match your bouquet.
+            </li>
+            <li>
+              <strong>Gift Baskets:</strong> Customize gift baskets with your
+              choice of flowers, chocolates, and other goodies.
+            </li>
+            <li>
+              <strong>Flower Subscription Services:</strong> Set up a
+              subscription for regular flower deliveries with customizable
+              options for frequency, type of flowers, and more.
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Floweristly</p>
+    </footer>
+  </body>
+</html>
