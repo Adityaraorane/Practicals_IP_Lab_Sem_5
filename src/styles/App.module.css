@@ -1,0 +1,63 @@
+.header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.profilePic {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.section {
+  max-width: 800px; 
+  margin: 20px auto; 
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.skillList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.themeButton {
+  margin: 20px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.themeButton:hover {
+  background-color: #0056b3;
+}
+
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+
+}
+
+.paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.list {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+  list-style-type: square;
+}
+
+.blockquote {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  color: #6c757d;
+  font-style: italic;
+  border-left: 5px solid #6c757d;
+  padding-left: 1rem;
+}
+
