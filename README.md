@@ -68,3 +68,21 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Photos:-
+light mode->
+<img width="1280" alt="image" src="https://github.com/user-attachments/assets/82aa6678-9f55-4338-a880-0a5e7f72b799">
+<img width="1279" alt="image" src="https://github.com/user-attachments/assets/19c9d00f-16de-4e7b-bc74-c166c0d95ef6">
+<img width="1280" alt="image" src="https://github.com/user-attachments/assets/6ceb404c-9414-4af9-95aa-a03f24ecdd28">
+<img width="1277" alt="image" src="https://github.com/user-attachments/assets/ebff6a32-8b70-42fc-b514-f4c48e5fd36b">
+dark mode->
+<img width="1278" alt="image" src="https://github.com/user-attachments/assets/dc7e751f-ffdc-4234-9019-f822e790adfb">
+<img width="1280" alt="image" src="https://github.com/user-attachments/assets/4d6a0b6c-5046-4100-9c69-58a8c2b1a955">
+<img width="1280" alt="image" src="https://github.com/user-attachments/assets/821fb710-43c8-4972-b995-84e6ee7b7e58">
+<img width="1280" alt="image" src="https://github.com/user-attachments/assets/87ffeea6-92b1-4b6a-96fe-7b00e3f2bdd5">
+
+
+
+
+
